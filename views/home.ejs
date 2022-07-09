@@ -1,0 +1,19 @@
+<%- include("partials/header"); -%> <%- include("partials/hero"); -%>
+<div class="section-story container">
+  <% posts.forEach(function(post){ %>
+  <div class="story">
+    <div class="each-story">
+      <h2 class="each-story-heading"><%=post.name%></h2>
+      <p>
+        <%=post.content.substring(0, 100) + " ..."%>
+        <a href="/posts/<%=post.name%>">Read More</a>
+      </p>
+    </div>
+  </div>
+
+  <% }) %>
+  <div class="add-story">
+    <button class="btn"><a href="compose">+</a></button>
+  </div>
+</div>
+<%- include("partials/footer"); -%>

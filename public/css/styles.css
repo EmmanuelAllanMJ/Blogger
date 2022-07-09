@@ -1,0 +1,477 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
+  /* Does NOT work on Safari */
+  /* scroll-behavior: smooth; */
+}
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  /* Only works if there is nothing absolutely positioned in relation to body */
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ***************** */
+/*    navigation    */
+/* ***************** */
+.nav {
+  /* position: fixed; */
+  height: 7.2rem;
+  background-color: #ffc017;
+  color: #333;
+
+  display: flex;
+  font-size: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.6rem;
+}
+.nav-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4.8rem;
+}
+.nav-logo {
+  font-weight: 700;
+  font-size: 5rem;
+  color: #000;
+  font-family: "Times New Roman", Times, serif;
+}
+.nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-item {
+}
+.nav-btn {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem 1.6rem;
+  border-radius: 25px;
+
+  color: #fff;
+  background-color: black;
+}
+
+/* ***************** */
+/*    HERO SECTION    */
+/* ***************** */
+
+.section-hero {
+  padding: 12rem 0 15rem 0;
+  background-color: #ffc017;
+  /* height: 100vh; */
+}
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 3.2rem;
+  max-width: 130rem;
+  align-items: center;
+  margin: 0 auto;
+  gap: 9.6rem;
+}
+.heading-secondary {
+  font-size: 10rem;
+  font-weight: 700;
+  font-family: "Times New Roman", Times, serif;
+  color: #000;
+}
+.heading-tertiary {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Times New Roman", Times, serif;
+  color: #333;
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.hero-img {
+  font-size: 20rem;
+  font-weight: 700;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  color: #000;
+}
+
+/* ***************** */
+/*    Story SECTION    */
+/* ***************** */
+
+.container {
+  /* 1140px */
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+.section-story {
+  margin-top: 8rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5.6rem;
+}
+.story {
+  display: inline-block;
+  padding: 2.4rem 4.8rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+}
+.story:hover {
+  transform: translateY(3px);
+  transition: all 0.1s;
+}
+.each-story-heading {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+}
+.each-story p {
+  font-size: 1.6rem;
+}
+
+.each-story {
+  display: flex;
+  flex-direction: column;
+}
+.add-story {
+  grid-column: 3/4;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.add-story button {
+  margin: 5rem;
+  height: 6.4rem;
+  width: 6.4rem;
+  background-color: #ffc017;
+  display: inline-block;
+  padding: 1.6rem;
+  border-radius: 100px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.add-story button:hover {
+  background-color: #ffd974;
+}
+.add-story a {
+  text-decoration: none;
+}
+
+/* ***************** */
+/*    Pricing SECTION    */
+/* ***************** */
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+.pricing-plan {
+  border-radius: 11px;
+  padding: 4.8rem;
+  width: 75%;
+}
+.pricing-plan--starter {
+  /* To make a single item to come end */
+  justify-self: end;
+  border: 2px solid #fdf2e9;
+}
+.pricing-plan--complete {
+  background-color: #fdf2e9;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+.heading-pricing {
+  font-size: 4.8rem;
+  text-align: center;
+  margin: 4.8rem 0 2.4rem;
+}
+
+.plan-name {
+  color: #cf711f;
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75;
+  margin-bottom: 3.2rem;
+}
+.plan-price {
+  font-size: 6.2rem;
+  color: #333;
+  margin-bottom: 1.6rem;
+  font-weight: 600;
+}
+.plan-price span {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #333;
+  margin-right: 0.8rem;
+}
+.plan-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  color: #6f6f6f;
+}
+.plan-sign-up {
+  text-align: center;
+  margin-top: 4.8rem;
+}
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+  margin-bottom: 9.6rem;
+}
+.grid:last-child {
+  margin-bottom: 0;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  line-height: 1.2;
+}
+.list-icon {
+  height: 3rem;
+  width: 3rem;
+  color: #e67e22;
+}
+
+/* Button */
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  /* background-color: #e67e22; */
+
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  text-decoration: none;
+
+  /* To animate */
+  /* transition: background-color 0.3s; */
+  transition: all 0.3s;
+
+  /* Only necessary for btn */
+  border: none;
+  cursor: pointer;
+}
+.btn--full:link,
+.btn--full:visited {
+  background-color: #ffc017;
+  color: #fff;
+}
+.btn--full:hover,
+.btn--full:active {
+  background-color: #cf711f;
+  color: #fff;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: #fff;
+  color: #555;
+}
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: #fdf2e9;
+
+  /* This will add border outside */
+  /* border: 3px solid #fff; */
+
+  /* Trick to add border inside */
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+/* ***************** */
+/*    FOOTER SECTION    */
+/* ***************** */
+
+.footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+}
+.grid--footer {
+  display: grid;
+  gap: 1.6rem;
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #767676;
+  align-self: end;
+  /* To push the element to the end  */
+  margin-top: auto;
+}
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+.address {
+  margin-bottom: 2.4rem;
+}
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
+}
+
+/* CAll to action */
+
+.section-cta {
+  padding: 9.6em 0 12.8rem 0;
+}
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* background-color: #e67e22; */
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+  overflow: hidden;
+  border-radius: 11px;
+}
+.cta-text-box {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  color: #45260a;
+}
+.cta .heading-secondary {
+  /* color: #45260a; */
+  color: inherit;
+  margin-bottom: 3.2rem;
+}
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(235, 151, 78, 0.35),
+      rgb(230, 126, 34, 0.35)
+    ),
+    url("../img/eating.jpg");
+  /*To cover the image to the given dimension */
+  background-size: cover;
+  background-position: center;
+}
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+  align-items: center;
+}
+/* ḥaving too many input may cause confusion. So we use decendent selectors */
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  color: inherit;
+  /* To force all the elements to accept the font-family */
+  font-family: inherit;
+  border: none;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  box-shadow: 0px 1px 2px rgb(0, 0, 0, 0.1);
+}
+.cta-form input::placeholder {
+  color: #aaa;
+}
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgb(253, 242, 233, 0.5);
+}
+
+/* Displaying blog */
+.blog {
+  margin-top: 7.2rem;
+}
+.blog-title {
+  font-size: 6.4rem;
+  margin-bottom: 3.6rem;
+}
+.blog-content {
+  font-size: 2.4rem;
+}
