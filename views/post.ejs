@@ -1,6 +1,15 @@
 <%- include("partials/header"); -%>
 <div class="blog container">
   <h1 class="blog-title"><%=name%></h1>
+  <% if (author===true){ %>
+  <a href="<%=name%>/edit"
+    ><ion-icon class="edit-icon" name="create-outline"></ion-icon
+  ></a>
+  <a href="<%=name%>/delete"
+    ><ion-icon class="delete-icon" name="trash-outline"></ion-icon
+  ></a>
+  <% }%>
+
   <p class="blog-content"><%=content%></p>
 </div>
 

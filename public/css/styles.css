@@ -25,6 +25,9 @@ body {
 /* ***************** */
 /*    navigation    */
 /* ***************** */
+.nav-fixed {
+  position: fixed;
+}
 .nav {
   /* position: fixed; */
   height: 7.2rem;
@@ -66,6 +69,10 @@ body {
 
   color: #fff;
   background-color: black;
+}
+.nav-btn:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s;
 }
 
 /* ***************** */
@@ -156,7 +163,7 @@ body {
   justify-content: center;
   text-align: center;
 }
-.add-story button {
+.add-story a {
   margin: 5rem;
   height: 6.4rem;
   width: 6.4rem;
@@ -167,12 +174,13 @@ body {
   position: fixed;
   bottom: 0;
   right: 0;
-}
-.add-story button:hover {
-  background-color: #ffd974;
-}
-.add-story a {
   text-decoration: none;
+  display: inline-block;
+  font-size: 3rem;
+  cursor: pointer;
+}
+.add-story a:hover {
+  background-color: #ffd974;
 }
 
 /* ***************** */
@@ -294,11 +302,13 @@ body {
   border: none;
   cursor: pointer;
 }
+.btn,
 .btn--full:link,
 .btn--full:visited {
-  background-color: #ffc017;
+  background-color: #b38610;
   color: #fff;
 }
+.btn:hover,
 .btn--full:hover,
 .btn--full:active {
   background-color: #cf711f;
@@ -319,6 +329,27 @@ body {
 
   /* Trick to add border inside */
   box-shadow: inset 0 0 0 3px #fff;
+}
+
+/* ***************** */
+/*    POST SECTION    */
+/* ***************** */
+
+.delete-icon,
+.edit-icon {
+  display: inline-block;
+  margin: 0;
+  padding: 1rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  margin-left: 3rem;
+}
+.delete-icon {
+  background-color: red;
+}
+.edit-icon {
+  background-color: #ffd974;
 }
 
 /* ***************** */
@@ -390,78 +421,33 @@ body {
   color: #555;
 }
 
-/* CAll to action */
-
-.section-cta {
+/* Compose section */
+.section-compose {
   padding: 9.6em 0 12.8rem 0;
 }
-.cta {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  /* background-color: #e67e22; */
+.compose {
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
-  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+  border-radius: 2rem;
+  background-color: #ffc62e;
+  padding: 5rem;
   overflow: hidden;
-  border-radius: 11px;
 }
-.cta-text-box {
-  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
-  color: #45260a;
+.compose-title {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
 }
-.cta .heading-secondary {
-  /* color: #45260a; */
-  color: inherit;
-  margin-bottom: 3.2rem;
-}
-.cta-text {
-  font-size: 1.8rem;
-  line-height: 1.8;
-  margin-bottom: 4.8rem;
-}
-.cta-img-box {
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(235, 151, 78, 0.35),
-      rgb(230, 126, 34, 0.35)
-    ),
-    url("../img/eating.jpg");
-  /*To cover the image to the given dimension */
-  background-size: cover;
-  background-position: center;
-}
-.cta-form {
-  display: grid;
-  grid-template-columns: 1fr;
-  column-gap: 3.2rem;
-  row-gap: 2.4rem;
-  align-items: center;
-}
-/* ḥaving too many input may cause confusion. So we use decendent selectors */
-.cta-form label {
-  display: block;
-  font-size: 1.6rem;
-  font-weight: 500;
-  margin-bottom: 1.2rem;
-}
-.cta-form input,
-.cta-form select {
+.compose-text-box {
   width: 100%;
-  padding: 1.2rem;
-  font-size: 1.8rem;
-  color: inherit;
-  /* To force all the elements to accept the font-family */
-  font-family: inherit;
+  font-size: 2.4rem;
+}
+
+.compose-text-box div input,
+.compose-text-box textarea {
+  width: 100%;
+  padding: 1rem 3rem;
+  border-radius: 10px;
   border: none;
-  background-color: #fdf2e9;
-  border-radius: 9px;
-  box-shadow: 0px 1px 2px rgb(0, 0, 0, 0.1);
-}
-.cta-form input::placeholder {
-  color: #aaa;
-}
-.cta *:focus {
-  outline: none;
-  box-shadow: 0 0 0 0.8rem rgb(253, 242, 233, 0.5);
+  margin-top: 1rem;
 }
 
 /* Displaying blog */
@@ -471,6 +457,7 @@ body {
 .blog-title {
   font-size: 6.4rem;
   margin-bottom: 3.6rem;
+  display: inline-block;
 }
 .blog-content {
   font-size: 2.4rem;

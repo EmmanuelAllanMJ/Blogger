@@ -1,0 +1,39 @@
+<%- include('partials/header') -%>
+
+<section class="section-cta" id="cta">
+  <div class="container">
+    <div class="cta">
+      <div class="cta-text-box">
+        <form class="cta-form" action="/post/<%=name%>/edit" method="post">
+          <!-- Using for we are linking the input and the label -->
+          <div>
+            <label for="full-name">Title</label>
+            <input
+              class="form-control"
+              type="text"
+              name="postTitle"
+              value="<%=name%>"
+              required
+            />
+          </div>
+          <div>
+            <br />
+            <label for="email">Post</label>
+            <textarea
+              class="form-control"
+              name="postBody"
+              rows="10"
+              cols="120"
+              required
+            >
+<%=content%></textarea
+            >
+          </div>
+
+          <button class="btn btn--form">Publish</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<%- include('partials/footer') -%>

@@ -1,26 +1,11 @@
 <%- include("partials/header"); -%>
-<h1>Compose</h1>
-<!-- <form class="" action="/compose" method="post">
-  <div class="form-group">
-    <label>Title</label>
-    <input class="form-control" type="text" name="postTitle" />
-    <label>Post</label>
-    <textarea
-      class="form-control"
-      name="postBody"
-      rows="5"
-      cols="30"
-    ></textarea>
-  </div>
-  <button class="btn btn-primary" type="submit" name="button">Publish</button>
-</form> -->
-
 <!--  -->
-<section class="section-cta" id="cta">
+<section class="section-compose" id="cta">
   <div class="container">
-    <div class="cta">
-      <div class="cta-text-box">
-        <form class="cta-form" action="/compose" method="post">
+    <h2 class="compose-title">Compose</h2>
+    <div class="compose">
+      <div class="compose-text-box">
+        <form class="compose-form" action="/compose" method="post">
           <!-- Using for we are linking the input and the label -->
           <div>
             <label for="full-name">Title</label>
@@ -38,7 +23,7 @@
             ></textarea>
           </div>
 
-          <button class="btn btn--form">Publish</button>
+          <button class="nav-btn">Publish</button>
         </form>
       </div>
     </div>

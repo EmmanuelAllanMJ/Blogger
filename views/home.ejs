@@ -1,6 +1,6 @@
 <%- include("partials/header"); -%> <%- include("partials/hero"); -%>
 <div class="section-story container">
-  <% posts.forEach(function(post){ %>
+  <% posts.map(function(post){ %>
   <div class="story">
     <div class="each-story">
       <h2 class="each-story-heading"><%=post.name%></h2>
@@ -13,7 +13,7 @@
 
   <% }) %>
   <div class="add-story">
-    <button class="btn"><a href="compose">+</a></button>
+    <a href="compose">+</a>
   </div>
 </div>
 <%- include("partials/footer"); -%>
