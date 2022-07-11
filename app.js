@@ -31,7 +31,9 @@ app.use(passport.session());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //Connecting to DB
-mongoose.connect("mongodb://localhost:27017/blogDB");
+mongoose.connect(
+  "mongodb+srv://admin-pixie:Allan123@cluster0.wr0c9xg.mongodb.net/blogDB"
+);
 
 //This is used to say node to use static files like styles.css in public folder
 app.use(express.static("public"));
