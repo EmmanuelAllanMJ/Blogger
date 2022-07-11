@@ -1,7 +1,7 @@
 <%- include("partials/header"); -%>
 <div class="blog container">
   <h1 class="blog-title"><%=name%></h1>
-  <% if (author===true){ %>
+  <% if (author===username.split('@')[0]){ %>
   <a href="<%=name%>/edit"
     ><ion-icon class="edit-icon" name="create-outline"></ion-icon
   ></a>
@@ -9,6 +9,7 @@
     ><ion-icon class="delete-icon" name="trash-outline"></ion-icon
   ></a>
   <% }%>
+  <p class="author">Author : <%=author%></p>
 
   <p class="blog-content"><%=content%></p>
 </div>

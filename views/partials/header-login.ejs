@@ -13,9 +13,12 @@
       <a class="nav-logo" href="/">M</a>
       <div class="nav-text">
         <a class="nav-item" href="/pricing">Pricing</a>
-
+        <%if (username ==="undefined"){%>
         <a class="nav-item" href="/signin">Sign In</a>
         <button class="nav-btn">Get started</button>
+        <%}else{%>
+        <p><%=username%></p>
+        <%}%>
       </div>
     </div>
 
